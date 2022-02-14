@@ -1,0 +1,16 @@
+<h1>The Game</h1>
+
+<p>
+<ol>
+  <%@letters.each do |letter|  %>
+    <li id="list-violet"> <%=letter%> </li>
+    <% end %>
+</ol>
+
+<form action="/score" method="POST">
+  <input type="text" name="combination">
+  <input type="submit" value="Test Your Word!">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+</p>
